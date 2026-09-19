@@ -1,0 +1,25 @@
+{
+  "resourceLogs": [
+    {
+      "scopeLogs": [
+        {
+          "logRecords": [
+            {
+              "traceId": "public-trace-001",
+              "body": {
+                "stringValue": "[removed]"
+              },
+              "attributes": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "spanEvents": [
+    {
+      "name": "lookup",
+      "attributes": {}
+    }
+  ]
+}

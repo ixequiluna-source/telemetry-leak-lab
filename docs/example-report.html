@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'sha256-6Ox8Kzacyr2s2OQ3fLGiWt3ol3TC2NwLkuPQJA7dHcY='; img-src data:; base-uri 'none'; form-action 'none'"><link rel="icon" href="data:,"><title>telemetry-leak-lab · Evidence report</title><style>*{box-sizing:border-box}body{margin:0;background:#0b1017;color:#e8edf2;font:16px/1.65 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:56px 24px}header{display:flex;justify-content:space-between;border-bottom:1px solid #334252;padding-bottom:20px;gap:20px;flex-wrap:wrap}.label{color:#8bdcca;text-transform:uppercase;font-size:12px;letter-spacing:.14em}h1{font-size:clamp(36px,7vw,74px);line-height:1.05;letter-spacing:-.055em;max-width:900px;margin:64px 0 24px}h2{font-size:24px}.intro{color:#b3c2d0;max-width:780px;font-size:19px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;margin:40px 0}article{background:#131e2a;border:1px solid #34475a;border-radius:18px;padding:26px;min-width:0}.verdict{font-size:clamp(22px,3vw,30px);overflow-wrap:anywhere;font-weight:700;color:#a1e8bc}.bad{color:#ffb2b0}.neutral{color:#f5d58c}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.8 ui-monospace,monospace;background:#080d14;padding:20px;border-radius:12px}footer{border-top:1px solid #334252;margin-top:60px;padding-top:24px;color:#b3c2d0}a{color:#8bdcca}a:focus-visible{outline:3px solid #fff;outline-offset:5px}details{margin-top:24px}summary{cursor:pointer;min-height:44px}p{overflow-wrap:anywhere}@media print{body{background:white;color:black}article,pre{background:white;color:black}.verdict,.bad,.neutral,.label,a{color:black}}</style></head><body><main><header><strong>telemetry-leak-lab</strong><span class="label">IX / SECURITY ENGINEERING</span></header><p class="label">Reproducible experiments · v0.1.0</p><h1>Redacted does not mean gone.</h1><p class="intro">Synthetic inputs. Executed checks. Explicit failure states. This report describes the configured experiments; it is not a security certification.</p><section class="grid"><article><p class="label">incomplete redaction</p><p class="verdict bad">LEAK</p><p>Known canary material remains after processing.</p><details><summary>Inspect sanitized evidence</summary><pre>{
+  &quot;experiment&quot;: &quot;incomplete redaction&quot;,
+  &quot;verdict&quot;: &quot;LEAK&quot;,
+  &quot;summary&quot;: &quot;Known canary material remains after processing.&quot;,
+  &quot;known_canaries&quot;: 2,
+  &quot;missing_baseline&quot;: [],
+  &quot;failed_controls&quot;: [],
+  &quot;findings&quot;: [
+    {
+      &quot;canary&quot;: &quot;patient&quot;,
+      &quot;encoding&quot;: &quot;sha256&quot;,
+      &quot;location&quot;: &quot;$/k1/[0]/k1/k0&quot;
+    }
+  ],
+  &quot;scope&quot;: &quot;Known variants in parsed JSON only; absence is not proof that all sensitive data is removed.&quot;
+}</pre></details></article><article><p class="label">configured redaction</p><p class="verdict ">PASS</p><p>All known canaries were observed before, absent after, and configured controls survived.</p><details><summary>Inspect sanitized evidence</summary><pre>{
+  &quot;experiment&quot;: &quot;configured redaction&quot;,
+  &quot;verdict&quot;: &quot;PASS&quot;,
+  &quot;summary&quot;: &quot;All known canaries were observed before, absent after, and configured controls survived.&quot;,
+  &quot;known_canaries&quot;: 2,
+  &quot;missing_baseline&quot;: [],
+  &quot;failed_controls&quot;: [],
+  &quot;findings&quot;: [],
+  &quot;scope&quot;: &quot;Known variants in parsed JSON only; absence is not proof that all sensitive data is removed.&quot;
+}</pre></details></article><article><p class="label">dropped useful telemetry</p><p class="verdict neutral">INCONCLUSIVE</p><p>Baseline or preservation controls did not establish a measurable experiment.</p><details><summary>Inspect sanitized evidence</summary><pre>{
+  &quot;experiment&quot;: &quot;dropped useful telemetry&quot;,
+  &quot;verdict&quot;: &quot;INCONCLUSIVE&quot;,
+  &quot;summary&quot;: &quot;Baseline or preservation controls did not establish a measurable experiment.&quot;,
+  &quot;known_canaries&quot;: 2,
+  &quot;missing_baseline&quot;: [],
+  &quot;failed_controls&quot;: [
+    {
+      &quot;control&quot;: 1,
+      &quot;phase&quot;: &quot;after&quot;
+    }
+  ],
+  &quot;findings&quot;: [],
+  &quot;scope&quot;: &quot;Known variants in parsed JSON only; absence is not proof that all sensitive data is removed.&quot;
+}</pre></details></article></section><details><summary>Report integrity</summary><p>SHA-256 of the indented JSON payload, without its final newline:</p><pre>18840767a93ed49de9b5d9335aad1c3f197196fe879588330ec78b78d79fa605</pre></details><footer>Built by <a href="https://ixequiluna.ai">Dr. Ixequi Luna</a> · Runs locally with Python. No external assets, analytics or scripts.</footer></main></body></html>

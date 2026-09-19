@@ -1,0 +1,12 @@
+{
+  "canaries": {
+    "patient": "SYNTHETIC-PATIENT-4829",
+    "email": "synthetic+lab@example.invalid"
+  },
+  "controls": [
+    {
+      "pointer": "/resourceLogs/0/scopeLogs/0/logRecords/0/traceId",
+      "expected": "public-trace-001"
+    }
+  ]
+}

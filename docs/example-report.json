@@ -1,0 +1,43 @@
+[
+  {
+    "experiment": "incomplete redaction",
+    "verdict": "LEAK",
+    "summary": "Known canary material remains after processing.",
+    "known_canaries": 2,
+    "missing_baseline": [],
+    "failed_controls": [],
+    "findings": [
+      {
+        "canary": "patient",
+        "encoding": "sha256",
+        "location": "$/k1/[0]/k1/k0"
+      }
+    ],
+    "scope": "Known variants in parsed JSON only; absence is not proof that all sensitive data is removed."
+  },
+  {
+    "experiment": "configured redaction",
+    "verdict": "PASS",
+    "summary": "All known canaries were observed before, absent after, and configured controls survived.",
+    "known_canaries": 2,
+    "missing_baseline": [],
+    "failed_controls": [],
+    "findings": [],
+    "scope": "Known variants in parsed JSON only; absence is not proof that all sensitive data is removed."
+  },
+  {
+    "experiment": "dropped useful telemetry",
+    "verdict": "INCONCLUSIVE",
+    "summary": "Baseline or preservation controls did not establish a measurable experiment.",
+    "known_canaries": 2,
+    "missing_baseline": [],
+    "failed_controls": [
+      {
+        "control": 1,
+        "phase": "after"
+      }
+    ],
+    "findings": [],
+    "scope": "Known variants in parsed JSON only; absence is not proof that all sensitive data is removed."
+  }
+]

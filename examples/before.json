@@ -1,0 +1,34 @@
+{
+  "resourceLogs": [
+    {
+      "scopeLogs": [
+        {
+          "logRecords": [
+            {
+              "traceId": "public-trace-001",
+              "body": {
+                "stringValue": "synthetic+lab@example.invalid"
+              },
+              "attributes": [
+                {
+                  "key": "patient.id",
+                  "value": {
+                    "stringValue": "SYNTHETIC-PATIENT-4829"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "spanEvents": [
+    {
+      "name": "lookup",
+      "attributes": {
+        "patient.hash": "3d103c45eef731e4d278ed04da83846984589de0779539aad698aa7d03a72f41"
+      }
+    }
+  ]
+}
